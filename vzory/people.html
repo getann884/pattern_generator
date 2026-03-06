@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./obrazky/favicon/favicon.ico">
+    <meta name="description" content="Vítejte v generátoru vzorů! Vyzkoušejte vzor Lidé.">
+    <meta name="keywords" content="Pattern, pattern maker, vzor, generator vzoru">
+    <meta name="author" content="Anna Getachewová">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Generátor vzorů - Lidé</title>
+</head>
+
+<body>
+
+    <div class="pattern" id="patternContainer">
+    </div>
+
+    <div class="menu" id="menuContainer">
+
+        <a class="back" href='../index.html'">
+            <span class="material-symbols-outlined">west</span></a>
+
+        <h1>Lidé</h1>
+
+        <div class="color">
+            <input type="color" name="color" id="color1" value="#FFDF0F">
+            <input type="text" name="hex" id="hex1" placeholder="první barva" value="#FFDF0F">
+        </div>
+
+        <div class="color">
+            <input type="color" name="color" id="color2" value="#00942C">
+            <input type="text" name="hex" id="hex2" placeholder="druhá barva" value="#00942C">
+        </div>
+
+        <div class="color">
+            <input type="color" name="color" id="color3" value="#000000">
+            <input type="text" name="hex" id="hex3" placeholder="pozadí" value="#000000">
+        </div>
+
+        <div class="size">
+            <span class="material-symbols-outlined">
+                format_size</span>
+            <input type="number" id="size" name="size" min="1" max="150" placeholder="12" value="60">
+        </div>
+
+        <div class="rozestup">
+            <span class="material-symbols-outlined">
+                format_letter_spacing
+            </span>
+            <input type="number" min="-100" max="100" class="horizontal" id="horizontal" placeholder="35" value="10">
+            <span class="material-symbols-outlined">
+                format_line_spacing
+            </span>
+            <input type="number" min="-100" max="100" class="vertical" id="vertical" placeholder="35" value="15">
+        </div>
+
+        <div class="rotate">
+            <span class="material-symbols-outlined" id="iconrotate">screen_rotation_alt</span>
+            <input type="number" min="0" max="360" class="degree" id="degree" placeholder="0">
+        </div>
+
+        <input type="text" name="patternbase" id="text1" placeholder="Text/symbol" value="𐦂𖨆𐀪𖠋">
+        <button type="button" onclick="pattern()">Vygenerovat</button>
+
+    </div>
+
+    <button class="hide" id="hide" onclick="hide()">
+        <span class="material-symbols-outlined" id="icon">visibility</span>
+    </button>
+
+
+    <script src="../javascript.js"></script>
+</body>
+
+</html>
